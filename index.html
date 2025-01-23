@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dona David - Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background: #008CBA;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            background-color: #ffcb00;
+            text-align: center;
+        }
+
+        .skills div {
+            flex: 1;
+            margin: 0 20px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .skills p {
+            font-size: 1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: #ff7f50;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            display: inline-block;
+            margin: 20px;
+            padding: 30px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            background-color: #fff;
+            color: #4caf50;
+            padding: 10px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact a:hover {
+            background-color: #45a049;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .skills {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .skills div {
+                margin: 10px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .skills div {
+                padding: 15px;
+            }
+
+            .project-card {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contact a {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Dona David</h1>
+        <p>Student | Web Developer | Teacher | Dancer</p>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div>
+            <h3>Leadership</h3>
+            <p>Leading teams and motivating people to achieve goals.</p>
+        </div>
+        <div>
+            <h3>Communication</h3>
+            <p>Clear, concise, and effective communication with individuals and teams.</p>
+        </div>
+        <div>
+            <h3>Coding</h3>
+            <p>Building websites and applications with a passion for learning new technologies.</p>
+        </div>
+        <div>
+            <h3>Reading</h3>
+            <p>Constantly expanding knowledge through books and articles.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Pets Care Shop</h3>
+            <p>A simple yet modern eCommerce website designed to showcase pet products and services.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for any collaboration or questions.</p>
+        <a href="mailto:dona@example.com">Email Me</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dona David. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
