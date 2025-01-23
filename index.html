@@ -6,188 +6,166 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dona David - Portfolio</title>
     <style>
-        /* Basic Reset */
+        /* Global styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
+            background: #f4f4f9;
             color: #333;
-        }
-
-        h1, h2, h3 {
-            color: #fff;
+            line-height: 1.6;
         }
 
         a {
             text-decoration: none;
-            color: #333;
+            color: inherit;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin: 20px 0;
         }
 
         /* Header Section */
         header {
-            background: #008CBA;
-            padding: 40px 0;
+            background: #2e3b4e;
+            color: #fff;
             text-align: center;
+            padding: 50px 20px;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3em;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.2em;
+        }
+
+        header a {
+            display: inline-block;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: #ff5722;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .about h2 {
+            color: #2e3b4e;
+            font-size: 2.5em;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            margin: 20px 0;
+            color: #555;
         }
 
         /* Skills Section */
         .skills {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 0;
-            background-color: #ffcb00;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             text-align: center;
         }
 
         .skills div {
-            flex: 1;
-            margin: 0 20px;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #ffeb3b;
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
         .skills div:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
         }
 
         .skills h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #2e3b4e;
         }
 
-        .skills p {
-            font-size: 1rem;
-        }
-
-        /* Projects Section */
+        /* Project Section */
         .projects {
-            background-color: #ff7f50;
-            padding: 50px 20px;
+            background-color: #f8f8f8;
             text-align: center;
+            border-radius: 10px;
+            padding: 40px;
         }
 
         .projects h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #2e3b4e;
         }
 
-        .project-card {
-            background: #fff;
-            display: inline-block;
-            margin: 20px;
-            padding: 30px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* Contact Section */
-        .contact {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .contact a {
-            background-color: #fff;
-            color: #4caf50;
-            padding: 10px 30px;
-            border-radius: 5px;
-            font-size: 1.2rem;
+        .projects .project {
+            background-color: #ff7043;
+            color: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
             transition: background-color 0.3s ease;
         }
 
-        .contact a:hover {
-            background-color: #45a049;
-            color: #fff;
+        .projects .project:hover {
+            background-color: #ff5722;
         }
 
-        /* Footer */
+        .projects .project a {
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Footer Section */
         footer {
-            background-color: #333;
-            color: #fff;
+            background: #2e3b4e;
+            color: white;
             text-align: center;
             padding: 20px;
         }
 
-        /* Media Queries for Responsiveness */
-        @media screen and (max-width: 768px) {
-            .skills {
-                flex-direction: column;
-                padding: 30px;
-            }
-
-            .skills div {
-                margin: 10px 0;
-                width: 100%;
-                text-align: center;
-            }
-
-            .project-card {
-                width: 100%;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
+        footer a {
+            color: #ff7043;
+            font-weight: bold;
         }
 
-        @media screen and (max-width: 480px) {
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5em;
             }
 
-            .skills div {
-                padding: 15px;
+            .about p, .skills h3 {
+                font-size: 1.1em;
             }
 
-            .project-card {
-                width: 100%;
-                padding: 20px;
+            .skills {
+                grid-template-columns: 1fr;
             }
 
-            .contact a {
-                font-size: 1rem;
+            .projects .project {
+                font-size: 0.9em;
             }
         }
 
@@ -198,48 +176,49 @@
     <!-- Header Section -->
     <header>
         <h1>Dona David</h1>
-        <p>Student | Web Developer | Teacher | Dancer</p>
+        <p>IT Student | Coding Enthusiast | Aspiring Web Developer</p>
+        <a href="#about">Learn More About Me</a>
     </header>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm an IT student with a passion for coding, teaching. I'm always excited to learn new things and expand my knowledge, especially in web development!</p>
+    </section>
+
     <!-- Skills Section -->
-    <section class="skills">
+    <section id="skills" class="skills">
         <div>
             <h3>Leadership</h3>
-            <p>Leading teams and motivating people to achieve goals.</p>
+            <p>I love leading and collaborating with teams to achieve our goals.</p>
         </div>
         <div>
             <h3>Communication</h3>
-            <p>Clear, concise, and effective communication with individuals and teams.</p>
+            <p>Clear and effective communication is key to success in any project.</p>
         </div>
         <div>
             <h3>Coding</h3>
-            <p>Building websites and applications with a passion for learning new technologies.</p>
+            <p>I'm passionate about coding and problem-solving, especially in web development.</p>
         </div>
         <div>
-            <h3>Reading</h3>
-            <p>Constantly expanding knowledge through books and articles.</p>
+            <h3>Dancing</h3>
+            <p>Dancing allows me to express myself creatively and stay active.</p>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Pets Care Shop</h3>
-            <p>A simple yet modern eCommerce website designed to showcase pet products and services.</p>
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Book Rental System</h3>
+            <p>A simple yet effective platform for managing car service.</p>
+            <a href="#">View Project</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for any collaboration or questions.</p>
-        <a href="mailto:dona@example.com">Email Me</a>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Dona David. All Rights Reserved.</p>
+        <p>© 2025 Dona David | <a href="mailto:donadavid018@gmail.com">Contact Me</a></p>
     </footer>
 
 </body>
